@@ -1,5 +1,5 @@
 #Ignorar arquivos de extensão do Chrome Web Store
-*.crx
-*.pem
+maps_app.*
 maps_app/
 maps_app/*
+
