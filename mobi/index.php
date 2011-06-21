@@ -1,6 +1,6 @@
 <?php
   // Copyright 2009 Google Inc. All Rights Reserved.
-  $GA_ACCOUNT = "UA-23860787-2";
+  $GA_ACCOUNT = "MO-23860787-2";
   //$GA_PIXEL = "/ga.php";
   $GA_PIXEL = "ga.php";
 
