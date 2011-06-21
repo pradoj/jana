@@ -1,8 +1,7 @@
 CACHE MANIFEST
-#2011-06-21 10h03
+#2011-06-21 10h14
 CACHE:
 #HTML
-/
 index.php
 #CSS
 jquery.mobile/jquery.mobile.min.css
@@ -22,6 +21,7 @@ jquery.mobile/images/icons-36-white.png
 #FAVICON
 ../calculator.ico
 ../calculator-128.png
+
 NETWORK:
 *
 #
