@@ -115,7 +115,7 @@
                         <option value="2">Dois, tive que dividir</option>
                         <option value="3">Três, é demais!!</option>
                     </select><br />
-                <a href="#output" id="calcular" data-role="button">Calcular o meu!</a><br />
+                <a href="#output" id="calcular" data-role="button" data-theme="b">Calcular o meu!</a><br />
             </fieldset>
         </form>
         <div data-role="footer">
