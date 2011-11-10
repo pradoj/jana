@@ -111,7 +111,7 @@
             <fieldset>
                 <legend>Calcular honorários</legend>
                 <label for="acao">Qual o valor da ação do cliente?</label><br />
-                    <input id="acao" type="number" autofocus="autofocus" placeholder="Em reais (R$)"><br />
+                    <input id="acao" type="number" placeholder="Em reais (R$)"><br />
                 <label for="honorario">Humor?</label><br />
                     <select id="honorario">
                         <option value=".3">Estou legal, 30%</option>
