@@ -57,8 +57,8 @@ if($ismobi->CheckMobile()) {
     <ul>
         <li><a href="mobi/">Mobile</a></li>
         <li><a href="http://<?php echo $_SERVER['HTTP_HOST'];  ?>/contato/">Contato</a></li>
-        <li><a href="http://blog.rogeriopradoj.com">Blog</a></li>
-        <li><a href="http://rogeriopradoj.com">Portal</a></li>
+        <li><a href="http://rogeriopradoj.com">Blog</a></li>
+        <li><a href="http://pradoj.com">Portal</a></li>
     </ul>
     <div id="header" class="ui-widget-header">
         <h1>Calculadora da Jana</h1>
@@ -86,7 +86,7 @@ if($ismobi->CheckMobile()) {
         </form>
     </div>
     <div id="footer" class="ui-state-highlight">
-        <p>(c) <?php echo date('Y');?> - <a href="http://rogeriopradoj.com">rogeriopradoj.com</a></p>
+        <p>(c) <?php echo date('Y');?> - <a href="http://pradoj.com">pradoj.com</a></p>
     </div>
     <script src="https://www.google.com/jsapi?key=ABQIAAAAyMsBjONULfcVHXK7LMmTThQKM37SVr7td1hHSepMJtMbxMD2-hRMZ9wtYo3JKVFi2zetIv9EbVAHrA" type="text/javascript"></script>
     <script type="text/javascript">
