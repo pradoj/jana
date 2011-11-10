@@ -26,7 +26,7 @@
 ?>
 <!DOCTYPE html>
 <!--<html>-->
-<html manifest="cache.appcache">
+<html manifest="cache.appcache.php">
   <head>
     <script>
     if (window.applicationCache) {
