@@ -28,6 +28,15 @@
 <!--<html>-->
 <html manifest="cache.appcache">
   <head>
+    <script>
+    if (window.applicationCache) {
+    	applicationCache.addEventListener('updateready', function() {
+	        if (confirm('Uma nova versão está disponível. Mostrar agora?')) {
+            	window.location.reload();
+        	}
+    	});
+	}
+    </script>
     <meta charset="utf-8">
     <title>Calculadora da Jana</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
