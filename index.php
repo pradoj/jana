@@ -1,4 +1,8 @@
 <?php
+header('Location: mobi/');
+exit;
+?>
+<?php
 // carrega classe mobile
 require_once "ismobile.class.php";
 // instancia classe IsMobile
