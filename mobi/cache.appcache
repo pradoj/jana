@@ -1,8 +1,5 @@
-<?php
-header('Content-Type: text/cache-manifest');
-?>
 CACHE MANIFEST
-#2011-11-13 01h13
+#2011-11-13 01h12
 CACHE:
 #HTML
 index.php
@@ -27,6 +24,3 @@ jquery.mobile/images/icons-36-white.png
 
 NETWORK:
 #*
-<?php
-echo "# Hash: " . md5_file('index.php') . "\n";
-?>
