@@ -117,6 +117,10 @@
                     <input id="acao" type="text" placeholder="Em reais (R$)"><br />
                 <label for="honorario">Humor?</label><br />
                     <select id="honorario">
+                        <option value=".05">Only 5%</option>
+                        <option value=".1">Apenas 10%</option>
+                        <option value=".15">Somente 15%</option>
+                        <option value=".2">Just 20%</option>
                         <option value=".3">Estou legal, 30%</option>
                         <option value=".5">Não fui com a cara, 50%</option>
                         <option value=".7">Sem explicação, 70%</option>
