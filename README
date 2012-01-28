@@ -1,23 +1,20 @@
-Calculadora da Jana
+#Calculadora da Jana
 http://rogeriopradoj.com/jana
-=== Português - pt-BR ===
+
+## Português - pt-BR
 Usa:
 - jQuery
 - jQuery UI
 - jQuery Global
 - jQuery MaskMoney
 - isMobile PHP
-
-Na versão mobile também usa:
 - jQuery Mobile
 
-=== English - en===
+## English - en
 Uses:
 - jQuery
 - jQuery UI
 - jQuery Global
 - jQuery MaskMoney
 - isMobile PHP
-
-In mobile version also uses:
 - jQuery Mobile
