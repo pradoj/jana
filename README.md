@@ -3,6 +3,7 @@ http://pradoj.com/apps/jana/
 
 ## Português - pt-BR
 Usa:
+
 * jQuery
 * jQuery UI
 * jQuery Global
@@ -12,6 +13,7 @@ Usa:
 
 ## English - en
 Uses:
+
 * jQuery
 * jQuery UI
 * jQuery Global
