@@ -1,33 +1,10 @@
-<?php
-  // Copyright 2009 Google Inc. All Rights Reserved.
-  $GA_ACCOUNT = "MO-23860787-2";
-  //$GA_PIXEL = "/ga.php";
-  $GA_PIXEL = "ga.php";
-
-  function googleAnalyticsGetImageUrl() {
-    global $GA_ACCOUNT, $GA_PIXEL;
-    $url = "";
-    $url .= $GA_PIXEL . "?";
-    $url .= "utmac=" . $GA_ACCOUNT;
-    $url .= "&utmn=" . rand(0, 0x7fffffff);
-    $referer = $_SERVER["HTTP_REFERER"];
-    $query = $_SERVER["QUERY_STRING"];
-    $path = $_SERVER["REQUEST_URI"];
-    if (empty($referer)) {
-      $referer = "-";
-    }
-    $url .= "&utmr=" . urlencode($referer);
-    if (!empty($path)) {
-      $url .= "&utmp=" . urlencode($path);
-    }
-    $url .= "&guid=ON";
-    return str_replace("&", "&amp;", $url);
-  }
-?>
 <!DOCTYPE html>
-<!--<html>-->
-<html manifest="cache.appcache.php">
+<html manifest="manifest.appcache" lang="pt-br">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <script>
     if (window.applicationCache) {
     	applicationCache.addEventListener('updateready', function() {
@@ -37,24 +14,22 @@
     	});
 	}
     </script>
-    <meta charset="utf-8">
+
     <title>Calculadora da Jana</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="shortcut icon" href="../calculator.ico">
-    <link rel="apple-touch-icon" href="../calculator-128.png">
-    <link rel="stylesheet" href="jquery.mobile/jquery.mobile.min.css" />
-    <style type="text/css">
-    </style>
-    <script type="text/javascript">
-		window.google_analytics_uacct = "UA-23860787-2";
-	</script>
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="jquery.mobile/jquery.mobile.min.js"></script>
-    <script src="../js/jquery.maskMoney.js"></script>
-    <script src="../js/jquery.global.js"></script>
-    <script src="../js/jquery.glob.pt-BR.js"></script>
+    <link rel="shortcut icon" href="calculator.ico">
+    <link rel="apple-touch-icon" href="calculator-128.png">
+
+    <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile.min.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile/jquery.mobile.min.js"></script>
+    <script src="js/jquery.maskMoney.js"></script>
+    <script src="js/jquery.global.js"></script>
+    <script src="js/jquery.glob.pt-BR.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('#acao').focus();
@@ -63,20 +38,13 @@
             });
             $.global.preferCulture("pt-BR");
             $("#acao").maskMoney({symbol:'R$ ', showSymbol:true, thousands:'.', decimal:',', symbolStay: true});
-            //console.log('teste');
+
             $("#calcular").click(function(event){
                 var acao      = $.global.parseFloat($("#acao").val());
                 var honorario = parseFloat($("#honorario").val());
                 var advogados = parseInt($("#advogados").val())
                 var resultado = honorario * acao;
-                //console.log(acao);
-                //console.log(typeof acao);
-                //console.log(honorario);
-                //console.log(typeof honorario);
-                //console.log(resultado);
-                //console.log(typeof resultado);
-                //console.log(advogados);
-                //console.log(typeof advogados);
+                
                 $("#result").html(
                     '<table>'
                     + '<tr>'
@@ -117,10 +85,6 @@
                     <input id="acao" type="text" placeholder="Em reais (R$)"><br />
                 <label for="honorario">Humor?</label><br />
                     <select id="honorario">
-                        <option value=".05">Only 5%</option>
-                        <option value=".1">Apenas 10%</option>
-                        <option value=".15">Somente 15%</option>
-                        <option value=".2">Just 20%</option>
                         <option value=".3">Estou legal, 30%</option>
                         <option value=".5">Não fui com a cara, 50%</option>
                         <option value=".7">Sem explicação, 70%</option>
@@ -135,7 +99,10 @@
             </fieldset>
         </form>
         <div data-role="footer">
-            <p>(c) <?php echo date('Y');?> - <a href="http://pradoj.com">pradoj.com</a> - <a href="http://<?php echo $_SERVER['HTTP_HOST'];  ?>/contato/">Contato</a></p>
+            <p>&copy; <script type="text/javascript">
+        var currentTime = new Date();
+        document.write(currentTime.getFullYear());
+        </script> - <a href="http://pradoj.com">PradoJ.com</a> - <a href="http://pradoj.com/contato/">Contato</a></p>
         </div>
         <script type="text/javascript">
 	bb_bid = "1639816";
@@ -145,7 +112,6 @@
 	bb_limit = "4";
 	bb_format = "bbe";
 </script>
-<script type="text/javascript" src="http://static.boo-box.com/javascripts/embed.js"></script>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-7518068256340054";
 /* jana */
@@ -155,7 +121,7 @@ google_ad_height = 125;
 //-->
 </script>
 <script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
     </div>
 
@@ -169,11 +135,21 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <p id="result"></p>
         </div>
         <div data-role="footer">
-            <p>(c) <?php echo date('Y');?> - <a href="http://pradoj.com">pradoj.com</a> - <a href="http://<?php echo $_SERVER['HTTP_HOST'];  ?>/contato/">Contato</a></p>
+            <p>&copy; <script type="text/javascript">
+        var currentTime = new Date();
+        document.write(currentTime.getFullYear());
+        </script> - <a href="http://pradoj.com">PradoJ.com</a> - <a href="http://pradoj.com/contato/">Contato</a></p>
         </div>
     </div>
-    <?php
-    $googleAnalyticsImageUrl = googleAnalyticsGetImageUrl();
-    echo '<img alt ="" src="' . $googleAnalyticsImageUrl . '" />';?>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-23860787-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <p></p>
   </body>
 </html>

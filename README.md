@@ -1,5 +1,6 @@
 #Calculadora da Jana
-http://pradoj.com/apps/jana/
+
+<https://pradoj.github.io/jana/>
 
 ## Português - pt-BR
 Usa:
@@ -8,7 +9,6 @@ Usa:
 * jQuery UI
 * jQuery Global
 * jQuery MaskMoney
-* isMobile PHP
 * jQuery Mobile
 
 ## English - en
@@ -18,5 +18,4 @@ Uses:
 * jQuery UI
 * jQuery Global
 * jQuery MaskMoney
-* isMobile PHP
 * jQuery Mobile
